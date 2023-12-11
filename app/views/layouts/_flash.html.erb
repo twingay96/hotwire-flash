@@ -1,0 +1,9 @@
+<%# 컨트롤러의 flash.now[:notice] = "#{@post.id} added at #{Time.zone.now}" %>
+<%# key = notice , value = #{@post.id} added at #{Time.zone.now} %>
+<div data-controller="authohide">
+    <% flash.each do |key, value| %>
+        <%= content_tag :div , value, id: key%>
+        <%#= key %>
+        <%#= value%>
+    <% end %>
+</div>
